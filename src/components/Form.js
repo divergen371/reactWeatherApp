@@ -1,13 +1,13 @@
-const Form = (props) => {
+const Form = ({ setCity, getWeather }) => {
   return (
     <form>
       <input
         type="text"
         name="city"
         placeholder="City name"
-        onChange={(e) => props.setCity(e.target.value)}
+        onChange={(e) => setCity(e.target.value)}
       />
-      <button type="submit" onClick={props.getWeather}>
+      <button type="submit" onClick={getWeather}>
         Get weather
       </button>
     </form>
