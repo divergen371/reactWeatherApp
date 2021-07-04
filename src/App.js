@@ -28,7 +28,10 @@ function App() {
           conditionText: res.data.current.condition.text,
           icon: res.data.current.condition.icon,
         });
-      });
+      })
+      .catch((err) =>
+        alert("An error has occurred. Please reload the page and try again.")
+      );
   };
   return (
     <div className="wrapper">
